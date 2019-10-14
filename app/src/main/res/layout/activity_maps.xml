@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1"
-    tools:context=".MapsActivity">
+    tools:context="com.example.GetDirectionUsingEdtitText.MapsActivity">
 
    <!-- <fragment
         android:id="@+id/place_autocomplete"
@@ -57,14 +57,30 @@
 
     </LinearLayout>
 
+<RelativeLayout
+    android:layout_width="match_parent"
 
-
-
+    android:layout_height="match_parent">
     <fragment
         android:id="@+id/map"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
+        android:layout_above="@+id/btnGetDirection"
         android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/btnGetDirection"
+        android:text="get direction"
+        android:onClick="getDirection"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
+
+
 
 
 
